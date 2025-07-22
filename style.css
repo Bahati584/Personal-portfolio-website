@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #38bdf8;
+    --secondary-bg-color: #64748b;
+    --background-color: #0f172a;
+    --text-color: #f1f5f9;
+    --hover-color: #0ea5e9;
+    --link-hover: #22d3ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--link-hover);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-box a {
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-box a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Social Links */
+.home-sci {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-sci a {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.home-sci a:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Section Titles */
+.heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* About Section */
+.about,
+.services,
+.portfolio {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.about p,
+.services p,
+.portfolio p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services */
+.service-box {
+    background: var(--secondary-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+
+@media (max-width:768px) {
+
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        background: var(--background-color);
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    .home {
+        padding-top: 120px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-sci {
+        flex-wrap: wrap;
+    }
+}
+
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content,header,section,footer{
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
